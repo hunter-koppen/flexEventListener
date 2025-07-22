@@ -28,6 +28,13 @@
                         <attributeType name="String"/>
                     </attributeTypes>
                 </property>
+                <property key="readyToSend" type="attribute" required="false">
+                    <caption>Ready to send</caption>
+                    <description>Swap to true during the action to send a reply message.</description>
+                    <attributeTypes>
+                        <attributeType name="Boolean"/>
+                    </attributeTypes>
+                </property>
             </propertyGroup>
         </propertyGroup>
         <propertyGroup caption="Advanced">
