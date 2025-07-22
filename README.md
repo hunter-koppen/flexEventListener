@@ -22,8 +22,3 @@
     - the bundle will be included in the `deployment` and `widgets` folder of the Mendix test project.
 
 [specify contribution]
-
-to do:
-target more than just document element
-
-add response event
