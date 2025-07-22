@@ -6,18 +6,29 @@
     <description/>
     <icon/>
     <properties>
-        <propertyGroup caption="General">
-            <property key="messageReceived" type="attribute" required="false">
-                <caption>Message received</caption>
-                <description>Message received from the iframe.</description>
-                <attributeTypes>
-                    <attributeType name="String"/>
-                </attributeTypes>
-            </property>
-            <property key="onMessageReceived" type="action" required="false">
-                <caption>On message received</caption>
-                <description>Action to execute when a message is received from the iframe.</description>
-            </property>
+        <propertyGroup caption="Messages">
+            <propertyGroup caption="Reveice">
+                <property key="messageReceived" type="attribute" required="false">
+                    <caption>Message received</caption>
+                    <description>Message received from the iframe.</description>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                    </attributeTypes>
+                </property>
+                <property key="onMessageReceived" type="action" required="false">
+                    <caption>On message received</caption>
+                    <description>Action to execute when a message is received from the iframe.</description>
+                </property>
+            </propertyGroup>
+            <propertyGroup caption="Send">
+                <property key="messageToSend" type="attribute" required="false">
+                    <caption>Message to send</caption>
+                    <description>Message will be sent after the action is executed, so you can set it during the action.</description>
+                    <attributeTypes>
+                        <attributeType name="String"/>
+                    </attributeTypes>
+                </property>
+            </propertyGroup>
         </propertyGroup>
         <propertyGroup caption="Advanced">
             <property key="allowedOrigins" type="expression" defaultValue="" required="false">
