@@ -1,8 +1,18 @@
 import { createElement } from "react";
 
-import { HelloWorldSample } from "./components/HelloWorldSample";
+import { EventListenerComponent } from "./components/EventListener";
 import "./ui/FlexEventListener.css";
 
-export function FlexEventListener({ sampleText }) {
-    return <HelloWorldSample sampleText={sampleText} />;
+export function FlexEventListener({ allowedOrigins, messageReceived, onMessageReceived }) {
+
+    const handleMessageReceived = message => {
+        if (messageReceived) {
+            messageReceived.setValue(message);
+        }
+        if (onMessageReceived) {
+            onMessageReceived.execute(message);
+        }
+    };
+
+    return <EventListenerComponent allowedOrigins={allowedOrigins} onMessage={handleMessageReceived} />;
 }
