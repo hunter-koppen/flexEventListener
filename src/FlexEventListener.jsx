@@ -25,7 +25,7 @@ export function FlexEventListener({ allowedOrigins, messageReceived, onMessageRe
 
     return (
         <EventListenerComponent
-            allowedOrigins={allowedOrigins ? allowedOrigins.value : ""}
+            allowedOrigins={allowedOrigins?.value || "*"}
             onMessage={handleMessage}
             messageToSend={messageToSend}
         />
